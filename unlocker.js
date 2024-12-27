@@ -20,12 +20,12 @@ console.log("WeMod unlocker by K1tbyte")
 let defaultDir = path.join(process.env.LOCALAPPDATA || path.join(process.env.HOME || process.env.USERPROFILE, 'AppData', 'Local'), 'WeMod');
 let appDir = null
 
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
-
 const read = (title, onSubmit, onExit) => {
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+    
     rl.question(title, (answer) => {
         try {
             onSubmit(answer)
